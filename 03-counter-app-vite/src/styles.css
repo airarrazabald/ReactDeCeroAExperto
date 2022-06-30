@@ -1,0 +1,13 @@
+html, body {
+    background-color: rgba(125, 233, 17, 0.885);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    padding: 70px;
+}
+
+button {
+    font-size: 1.3rem;
+    margin-right: 5px;
+    padding: 15px;
+}
