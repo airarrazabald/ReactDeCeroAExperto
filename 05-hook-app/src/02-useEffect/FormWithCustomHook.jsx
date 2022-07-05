@@ -4,30 +4,11 @@ import { useForm } from '../hooks/useForm';
 
 export const FormWithCustomHook = () => {
 
-    const { username, email, password, formState,onInputChange} = useForm ({
+    const { username, email, password, formState,onInputChange, onResetForm} = useForm ({
         username: '',
         email:'',
         password:''
     });
-
-
-    // sirve para disparara eventos secundarios
-    // Se recomienda crear un useEffect por cada evento que realices
-    // useEffect( () => {
-    //     console.log('Se llamo use effect');
-    // },[]);
-
-    // useEffect( () => {
-    //     console.log('form change');
-    // },[ formState ]);
-
-    // useEffect( () => {
-    //     console.log('email change');
-    // },[ email ]);
-
-
-    
-
 
     return (
         <>
@@ -61,7 +42,7 @@ export const FormWithCustomHook = () => {
                 onChange= { onInputChange }
             />      
 
-           
+           <button onClick={ onResetForm } className="btn btn-primary mt-2 "> Reset </button>
 
             
         </>
