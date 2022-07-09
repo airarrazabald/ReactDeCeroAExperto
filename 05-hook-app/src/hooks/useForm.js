@@ -14,7 +14,6 @@ export const useForm = ( initialForm = {} ) => {
     };
 
     const onResetForm = () => {
-        console.log('reset');
         setFormState(initialForm);
     }
 
