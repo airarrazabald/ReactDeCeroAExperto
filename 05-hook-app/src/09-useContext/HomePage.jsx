@@ -14,8 +14,6 @@ export const HomePage = () => {
           <pre>
             { JSON.stringify(user,null,3)}
           </pre>
-
-         
       </>
     )
   }
