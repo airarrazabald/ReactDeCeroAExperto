@@ -20,7 +20,6 @@ describe('Pruebas en <HomePage />', () => {
 
         expect(preTag.innerHTML ).toBe('null');
 
-        //screen.debug();
     });
 
     test('debe mostrar el componenete con el usuario', () => {
