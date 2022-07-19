@@ -24,10 +24,9 @@ describe('Pruebas en <MainApp />', () => {
             <MemoryRouter initialEntries={['/login']}>
                 <MainApp />
             </MemoryRouter>
-        
         );
         
         expect( screen.getByText('LoginPage') ).toBeTruthy();
     });
-    
+
 });
