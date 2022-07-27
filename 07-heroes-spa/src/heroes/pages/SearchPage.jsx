@@ -59,7 +59,7 @@ export const SearchPage = () => {
 
 
 
-          <div className="alert alert-primary animate__animated animate__fadeIn"   style={ {display: showSearch ? '' : 'none'} }>Buscar un heroe</div>
+          <div className="alert alert-primary animate__animated animate__fadeInLeft"   style={ {display: showSearch ? '' : 'none'} }>Buscar un heroe</div>
 
           <div className="alert alert-danger animate__animated animate__fadeIn" style={ {display: showError ? '' : 'none' } }>No existen heroes con { q }</div>
 
