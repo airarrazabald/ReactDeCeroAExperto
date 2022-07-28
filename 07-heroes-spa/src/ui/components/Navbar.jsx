@@ -53,14 +53,14 @@ export const Navbar = () => {
                     }}
                         to="/search"
                     >
-                        Search
+                        Buscador
                     </NavLink>
                 </div>
             </div>
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
-                    <span className="nav-item nav-link text-primary" >
+                    <span className="nav-item nav-link text-primary text-capitalize" >
                         { user?.name }
                     </span>
 
@@ -68,7 +68,7 @@ export const Navbar = () => {
                         className="nav-item nav-link btn"
                         onClick={onLogout}
                     >
-                        Logout
+                        Cerrar sesión
                     </button>
                 </ul>
             </div>

@@ -29,12 +29,12 @@ export const SearchPage = () => {
 
   return (
     <>
-      <h1>Buscar</h1>
+      <h1>Buscador</h1>
       <hr />
 
       <div className="row">
-        <div className="col-5">
-          <h4>Buscando</h4>
+        <div className="col-xl-5 col-md-4">
+          <h4>Buscar</h4>
           <hr />
 
           <form onSubmit={ onSearchSubmit }>
@@ -47,19 +47,19 @@ export const SearchPage = () => {
               value={ searchText }
               onChange={ onInputChange }
             />
-            <button className="btn btn-outline-primary mt-1">
+            <button className="btn btn-outline-primary mt-2">
               Buscar
             </button>
           </form>
         </div>
 
-        <div className="col-7">
+        <div className="col-xl-7 col-md-8">
           <h4>Resultados</h4>
           <hr />
 
 
 
-          <div className="alert alert-primary animate__animated animate__fadeInLeft"   style={ {display: showSearch ? '' : 'none'} }>Buscar un heroe</div>
+          <div className="alert alert-primary animate__animated animate__fadeIn"   style={ {display: showSearch ? '' : 'none'} }>Buscar un heroe</div>
 
           <div className="alert alert-danger animate__animated animate__fadeIn" style={ {display: showError ? '' : 'none' } }>No existen heroes con { q }</div>
 
