@@ -64,7 +64,7 @@ export const SearchPage = () => {
           <div className="alert alert-danger animate__animated animate__fadeIn" style={ {display: showError ? '' : 'none' } }>No existen heroes con { q }</div>
 
           {
-            heroes.map( heroe => <HeroCard {...heroe} />)
+            heroes.map( heroe => <HeroCard key={ heroe.id } {...heroe} />)
           }
         </div>
       </div>

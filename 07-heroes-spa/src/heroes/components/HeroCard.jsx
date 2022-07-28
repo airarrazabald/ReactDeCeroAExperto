@@ -19,7 +19,7 @@ export const HeroCard = ({
       return (
         <div className="col animate__animated animate__fadeInLeft" >
             <div className="card">
-                <div class="row no-gutters">
+                <div className="row no-gutters">
                   <div className="col-4">
                     <img src={heroImageUrl} className="card-img" alt={ superhero } />
                   </div>
@@ -33,7 +33,7 @@ export const HeroCard = ({
                       }
                       
                       <p className="card-text" >
-                        <small class="text-muted">{ first_appearance }</small>
+                        <small className="text-muted">{ first_appearance }</small>
                       </p>
 
                       <Link to={ `/hero/${ id }`}>

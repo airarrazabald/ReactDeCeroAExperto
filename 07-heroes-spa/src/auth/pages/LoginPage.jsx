@@ -1,10 +1,17 @@
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 export const LoginPage = () => {
+
+  const { login } = useContext( AuthContext);
 
   const navigate = useNavigate();
 
   const onLogin = () => {
+
+      login('Abelardo Irarrazabal');
+
       navigate('/', {
           replace: true
       });
@@ -12,7 +19,7 @@ export const LoginPage = () => {
 
 
   return (
-    <div claasName="container mt-5">
+    <div className="container mt-5">
       <h1>Login</h1>
       <hr />
 
