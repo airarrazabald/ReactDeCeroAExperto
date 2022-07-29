@@ -7,6 +7,9 @@ describe('Pruebas en el <PrivateRoute />', () => {
 
     test('debe de mostrar el children si esta autenticado', () => {
 
+        // con Storage podemos hacer test con el localStorage
+        Storage.prototype.setItem = jest.fn();
+        
         const contextValue = {
             logged: true,
             user: {
@@ -17,7 +20,7 @@ describe('Pruebas en el <PrivateRoute />', () => {
 
         render(
             <AuthContext.Provider value={ contextValue }>
-                <MemoryRouter>
+                <MemoryRouter initialEntries={['/search?q=batman']}>
                     <PrivateRoute>
                         <h1>Ruta Privada</h1>
                     </PrivateRoute>
@@ -27,7 +30,7 @@ describe('Pruebas en el <PrivateRoute />', () => {
         );
 
         expect( screen.getByText('Ruta Privada')).toBeTruthy();
+        expect( localStorage.setItem ).toHaveBeenCalledWith("lastPath", "/search?q=batman");
     });
-
 
 })
